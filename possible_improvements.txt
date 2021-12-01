@@ -1,0 +1,7 @@
+decouple colour and complex computation (goal : change color scheme without recomputing)
+keep the result of previous complex computations in an array (goal : increase detail doesn't take longer and longer)
+(with above idea), skip pixels where the computation was finished (goal general optimization) (note : hard without better data structs)
+when moving around, use two image (to recompute and done) (just copy parts of the array or something) 
+more features :
+(prolly extremly hard) parametrize mandel curve and change the shape of the fractal by following it ( or a further/closer concentric thingy)
+change d (in z^d + c) with a key

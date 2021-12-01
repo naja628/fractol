@@ -1,0 +1,12 @@
+
+// TODO remove this
+#include <math.h>
+//int	bound_modulus(t_cpx z, void *data)
+//{
+//	(void) data;
+//	//printf("%f maps to %x\n,", 1.0 - exp(-ft_modulus(z)), 
+//	//		   (unsigned int) (0xff * (1.0 - exp(-ft_modulus(z)))));
+//	return ((unsigned int) (0xffffff * 
+//			(1.0 - exp(-ft_modulus(z)))));
+//	//return ft_gradient(0xffffff, 0, 1.0 - exp(-ft_modulus(z)));
+//}

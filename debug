@@ -1,0 +1,197 @@
+funs.c: In function ‘ft_set_params’:
+funs.c:15:16: warning: implicit declaration of function ‘ft_color_selector’; did you mean ‘ft_scheme_selector’? [-Wimplicit-function-declaration]
+   15 |  params->sch = ft_color_selector(0);
+      |                ^~~~~~~~~~~~~~~~~
+      |                ft_scheme_selector
+funs.c:15:16: error: incompatible types when assigning to type ‘t_colorscheme’ {aka ‘struct <anonymous>’} from type ‘int’
+In file included from hookable.c:1:
+hookable.h:7:11: fatal error: view.h: No such file or directory
+    7 | # include "view.h"
+      |           ^~~~~~~~
+compilation terminated.
+hooks.c:17:44: error: unknown type name ‘t_view’
+   17 | static void ft_redraw(void *win, t_im *im, t_view *v, t_cmap *f)
+      |                                            ^~~~~~
+hooks.c:17:55: error: unknown type name ‘t_cmap’
+   17 | static void ft_redraw(void *win, t_im *im, t_view *v, t_cmap *f)
+      |                                                       ^~~~~~
+hooks.c: In function ‘ft_kbd_hook’:
+hooks.c:25:2: error: unknown type name ‘t_state’
+   25 |  t_state *s;
+      |  ^~~~~~~
+hooks.c:27:7: error: ‘t_state’ undeclared (first use in this function); did you mean ‘state’?
+   27 |  s = (t_state *) params;
+      |       ^~~~~~~
+      |       state
+hooks.c:27:7: note: each undeclared identifier is reported only once for each function it appears in
+hooks.c:27:16: error: expected expression before ‘)’ token
+   27 |  s = (t_state *) params;
+      |                ^
+hooks.c:28:20: error: ‘ESC’ undeclared (first use in this function)
+   28 |     if (keycode == ESC)
+      |                    ^~~
+hooks.c:29:3: warning: implicit declaration of function ‘ft_quit’ [-Wimplicit-function-declaration]
+   29 |   ft_quit(s);
+      |   ^~~~~~~
+hooks.c:30:17: error: ‘UP’ undeclared (first use in this function)
+   30 |  if (keycode == UP)
+      |                 ^~
+hooks.c:31:3: warning: implicit declaration of function ‘ft_move_around’ [-Wimplicit-function-declaration]
+   31 |   ft_move_around(s->active, 0, -MV_SPEED);
+      |   ^~~~~~~~~~~~~~
+hooks.c:31:19: error: request for member ‘active’ in something not a structure or union
+   31 |   ft_move_around(s->active, 0, -MV_SPEED);
+      |                   ^~
+hooks.c:32:17: error: ‘DOWN’ undeclared (first use in this function)
+   32 |  if (keycode == DOWN)
+      |                 ^~~~
+hooks.c:33:19: error: request for member ‘active’ in something not a structure or union
+   33 |   ft_move_around(s->active, 0, MV_SPEED);
+      |                   ^~
+hooks.c:34:17: error: ‘LEFT’ undeclared (first use in this function)
+   34 |  if (keycode == LEFT)
+      |                 ^~~~
+hooks.c:35:19: error: request for member ‘active’ in something not a structure or union
+   35 |   ft_move_around(s->active, -MV_SPEED, 0);
+      |                   ^~
+hooks.c:36:17: error: ‘RIGHT’ undeclared (first use in this function)
+   36 |  if (keycode == RIGHT)
+      |                 ^~~~~
+hooks.c:37:19: error: request for member ‘active’ in something not a structure or union
+   37 |   ft_move_around(s->active, MV_SPEED, 0);
+      |                   ^~
+hooks.c:39:3: warning: implicit declaration of function ‘ft_rot_julia_const’ [-Wimplicit-function-declaration]
+   39 |   ft_rot_julia_const(s, -DTHETA);
+      |   ^~~~~~~~~~~~~~~~~~
+hooks.c:42:17: error: ‘SPC’ undeclared (first use in this function)
+   42 |  if (keycode == SPC)
+      |                 ^~~
+hooks.c:43:3: warning: implicit declaration of function ‘ft_next_color’ [-Wimplicit-function-declaration]
+   43 |   ft_next_color(s);
+      |   ^~~~~~~~~~~~~
+hooks.c:45:3: warning: implicit declaration of function ‘ft_print_julia_const’ [-Wimplicit-function-declaration]
+   45 |   ft_print_julia_const(s);
+      |   ^~~~~~~~~~~~~~~~~~~~
+hooks.c:46:2: warning: implicit declaration of function ‘ft_set_detail’ [-Wimplicit-function-declaration]
+   46 |  ft_set_detail(s, DEF_DETAIL);
+      |  ^~~~~~~~~~~~~
+hooks.c:47:3: error: request for member ‘needs_recompute’ in something not a structure or union
+   47 |  s->needs_recompute = 1;
+      |   ^~
+hooks.c:23:36: warning: unused parameter ‘state’ [-Wunused-parameter]
+   23 | int ft_kbd_hook(int keycode, void *state)
+      |                              ~~~~~~^~~~~
+hooks.c: In function ‘ft_ms_hook’:
+hooks.c:53:2: error: unknown type name ‘t_state’
+   53 |  t_state *s;
+      |  ^~~~~~~
+hooks.c:55:7: error: ‘t_state’ undeclared (first use in this function); did you mean ‘state’?
+   55 |  s = (t_state *) params;
+      |       ^~~~~~~
+      |       state
+hooks.c:55:16: error: expected expression before ‘)’ token
+   55 |  s = (t_state *) params;
+      |                ^
+hooks.c:56:16: error: ‘MS_LEFT’ undeclared (first use in this function)
+   56 |  if (button == MS_LEFT)
+      |                ^~~~~~~
+hooks.c:57:21: error: request for member ‘params’ in something not a structure or union
+   57 |   ft_set_detail(s, s->params->niter + DETAIL_INCR);
+      |                     ^~
+hooks.c:60:19: error: ‘MS_RIGHT’ undeclared (first use in this function)
+   60 |     if (button == MS_RIGHT)
+      |                   ^~~~~~~~
+hooks.c:61:3: warning: implicit declaration of function ‘ft_toggle_julia’ [-Wimplicit-function-declaration]
+   61 |   ft_toggle_julia(s, WIN_SZ, x, y);
+      |   ^~~~~~~~~~~~~~~
+hooks.c:62:16: error: ‘SCROLL_UP’ undeclared (first use in this function)
+   62 |  if (button == SCROLL_UP)
+      |                ^~~~~~~~~
+hooks.c:63:3: warning: implicit declaration of function ‘ft_zoom_view’ [-Wimplicit-function-declaration]
+   63 |   ft_zoom_view(s->active, ZOOM, x, y);
+      |   ^~~~~~~~~~~~
+hooks.c:63:17: error: request for member ‘active’ in something not a structure or union
+   63 |   ft_zoom_view(s->active, ZOOM, x, y);
+      |                 ^~
+hooks.c:64:21: error: ‘SCROLL_DOWN’ undeclared (first use in this function)
+   64 |  else if (button == SCROLL_DOWN)
+      |                     ^~~~~~~~~~~
+hooks.c:65:17: error: request for member ‘active’ in something not a structure or union
+   65 |   ft_zoom_view(s->active, 1 / ZOOM, x, y);
+      |                 ^~
+hooks.c:66:3: error: request for member ‘needs_recompute’ in something not a structure or union
+   66 |  s->needs_recompute = 1;
+      |   ^~
+hooks.c:51:48: warning: unused parameter ‘state’ [-Wunused-parameter]
+   51 | int ft_ms_hook(int button, int x, int y, void *state)
+      |                                          ~~~~~~^~~~~
+hooks.c: In function ‘ft_redraw_as_needed’:
+hooks.c:72:2: error: unknown type name ‘t_state’
+   72 |  t_state s;
+      |  ^~~~~~~
+hooks.c:74:7: error: ‘t_state’ undeclared (first use in this function); did you mean ‘state’?
+   74 |  s = (t_state *) state;
+      |       ^~~~~~~
+      |       state
+hooks.c:74:16: error: expected expression before ‘)’ token
+   74 |  s = (t_state *) state;
+      |                ^
+hooks.c:75:7: error: invalid type argument of ‘->’ (have ‘int’)
+   75 |  if (s->needs_recompute)
+      |       ^~
+hooks.c:76:3: warning: implicit declaration of function ‘ft_redraw’ [-Wimplicit-function-declaration]
+   76 |   ft_redraw(s->win, s->im, s->active, s->f);
+      |   ^~~~~~~~~
+hooks.c:76:14: error: invalid type argument of ‘->’ (have ‘int’)
+   76 |   ft_redraw(s->win, s->im, s->active, s->f);
+      |              ^~
+hooks.c:76:22: error: invalid type argument of ‘->’ (have ‘int’)
+   76 |   ft_redraw(s->win, s->im, s->active, s->f);
+      |                      ^~
+hooks.c:76:29: error: invalid type argument of ‘->’ (have ‘int’)
+   76 |   ft_redraw(s->win, s->im, s->active, s->f);
+      |                             ^~
+hooks.c:76:40: error: invalid type argument of ‘->’ (have ‘int’)
+   76 |   ft_redraw(s->win, s->im, s->active, s->f);
+      |                                        ^~
+hooks.c:77:3: error: invalid type argument of ‘->’ (have ‘int’)
+   77 |  s->needs_recompute = 0;
+      |   ^~
+hooks.c:70:31: warning: unused parameter ‘state’ [-Wunused-parameter]
+   70 | int ft_redraw_as_needed(void *state)
+      |                         ~~~~~~^~~~~
+hooks.c:78:1: warning: control reaches end of non-void function [-Wreturn-type]
+   78 | }
+      | ^
+im_buffer.c:21:6: error: conflicting types for ‘ft_init_im’
+   21 | t_im ft_init_im(void *mlx, t_im *im, int width, int height)
+      |      ^~~~~~~~~~
+In file included from im_buffer.c:1:
+im_buffer.h:25:7: note: previous declaration of ‘ft_init_im’ was here
+   25 | t_im *ft_init_im(void *mlx, int width, int height);
+      |       ^~~~~~~~~~
+im_buffer.c: In function ‘ft_init_im’:
+im_buffer.c:25:31: error: ‘t’ undeclared (first use in this function)
+   25 |  im->data = mlx_get_data_addr(t->im, &t->bytespp, &t->line_sz, &t->big_end);
+      |                               ^
+im_buffer.c:25:31: note: each undeclared identifier is reported only once for each function it appears in
+im_buffer.c:38:1: warning: control reaches end of non-void function [-Wreturn-type]
+   38 | }
+      | ^
+main.c:5:10: fatal error: ft_mapcomplex.h: No such file or directory
+    5 | #include "ft_mapcomplex.h"
+      |          ^~~~~~~~~~~~~~~~~
+compilation terminated.
+mapcomplex.c:15:6: error: conflicting types for ‘ft_set_map’
+   15 | void ft_set_map(t_cmap *map, int (*f)(t_cpx, void *), void *data)
+      |      ^~~~~~~~~~
+In file included from mapcomplex.c:1:
+mapcomplex.h:21:6: note: previous declaration of ‘ft_set_map’ was here
+   21 | void ft_set_map(int (*f)(t_cpx, void *), void *data);
+      |      ^~~~~~~~~~
+views.c: In function ‘ft_zoom_view’:
+views.c:19:15: warning: implicit declaration of function ‘ft_ccomb’ [-Wimplicit-function-declaration]
+   19 |  v->topleft = ft_ccomb(ft_cpx_xy(v, x, y), v->topleft, 1 / zoom);
+      |               ^~~~~~~~
+views.c:19:15: error: incompatible types when assigning to type ‘t_cpx’ {aka ‘struct s_complex’} from type ‘int’
+make: *** [Makefile:4: all] Error 1

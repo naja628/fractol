@@ -1,0 +1,9 @@
+setters
+main
+errors
+lag thing (with mlx_loop_hook??)
+parse options
+
+questions ?
+- have to use *error funs? 
+- endian thing (bytes) ok?
