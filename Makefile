@@ -1,4 +1,4 @@
-MLX_DIR = '~/apkg/mlx'
+MLX_DIR = '/home/nat/apkg/mlx'
 SRC = ft_complex.c funs.c hookable.c hooks.c im_buffer.c main.c mapcomplex.c select_color.c utils.c views.c console_args.c
 
 all: ${SRC}
