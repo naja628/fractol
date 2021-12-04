@@ -9,7 +9,14 @@
 #include "console_args.h"
 #include <stdio.h>
 
-void	print_helpbox(void)
+// possible errors / warnings (ordered by severity)
+#define OK 0
+#define HELP 1
+#define EXTRA_ARGS 2
+#define WRONG_ARGS 3
+#define FATAL 4
+
+static void	print_helpbox(void)
 {
 	printf("** HELPBOX **\n"
 		"## Running the program \n"
@@ -36,13 +43,6 @@ void	print_helpbox(void)
 		"  * right click : display julia fractal for z^2 + c (multi : z^d + "
 		"c) where c is where you clicked (1)\n");
 }
-
-// possible errors / warnings (ordered by severity)
-#define OK 0
-#define HELP 1
-#define EXTRA_ARGS 2
-#define WRONG_ARGS 3
-#define FATAL 4
 
 static void	ft_parse_args(t_state *s, int ac, char **av, int *status)
 {
