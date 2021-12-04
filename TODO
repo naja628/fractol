@@ -1,5 +1,5 @@
-handle mlx errors
-parse input
 multibrot
-norminette
-clean-up directory
+
+questions ?
+- have to use *error funs? 
+- endian thing (bytes) ok?
