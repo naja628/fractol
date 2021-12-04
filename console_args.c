@@ -75,7 +75,7 @@ static int	ft_try_update(int sign, t_uint *acc, t_uint digit)
 /* special version of atoi that sets errcode to -1 
  * when we overflow an int or if s is not an integer 
  * representation (using stricter rules than atoi) */
-int	ft_xatoi(const char *s, int *errcode)
+double	ft_xatoi(const char *s, int *errcode)
 {
 	int		sign;
 	t_uint	acc;
@@ -100,5 +100,5 @@ int	ft_xatoi(const char *s, int *errcode)
 	}
 	if (*s != '\0')
 		*errcode = -1;
-	return (sign * acc);
+	return (sign * acc / 1000.0);
 }

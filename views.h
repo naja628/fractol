@@ -1,5 +1,5 @@
-#ifndef FT_VIEWS_H
-#define FT_VIEWS_H
+#ifndef VIEWS_H
+# define VIEWS_H
 
 # include "ft_complex.h"
 # include "utils.h"

@@ -1,7 +1,7 @@
 #ifndef SELECT_COLOR_H
-#define SELECT_COLOR_H
+# define SELECT_COLOR_H
 
-typedef struct
+typedef struct s_colorscheme
 {
 	int	from;
 	int	to;

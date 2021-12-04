@@ -4,18 +4,11 @@ static int	ft_better_mod(int n, int q)
 {
 	if (n % q >= 0)
 		return (n % q);
-	else 
+	else
 		return (n + n % q);
 }
 
-#define NCHOICES 11
-t_colorscheme	ft_scheme_selector(int dir)
-{
-	static int			cur_scheme = 0;
-	const t_colorscheme	choices[NCHOICES] =
-	{
-//		// tropical (why is this ugly? )
-//		{0xc09010, 0x30a8ff},
+/* colorschemes with mnemonic labels :
 		// galaxy
 		{0x080020, 0xffffa0},
 		// ghost-ship
@@ -28,19 +21,44 @@ t_colorscheme	ft_scheme_selector(int dir)
 		{0x002020, 0x00b048},
 		// red ink
 		{0xb0b0b0, 0x300010},
+		// oasis
+		{0xffc070, 0x007070},
 		// crystal
-		{0x151522, 0xaf4fff},
+		{0x151522, 0xbf2fff},
+		// snowy
+		{0x302050, 0xbfbfff},
 		// sunset
-		{0x554090, 0xff4073},
+		{0x603898, 0xff007b},
 		// cream
 		{0x200010, 0xffdfbf},
 		// azulera
-		{0xb0b0b0, 0x100030},
+		{0xb0b0b0, 0x1b0038},
 		// kashmir
+		{0x006030, 0xffb040},
+		*/
+
+#define NCHOICES 13
+
+t_colorscheme	ft_scheme_selector(int dir)
+{
+	static int			cur_scheme = 0;
+	const t_colorscheme	choices[NCHOICES] =
+	{
+		{0x080020, 0xffffa0},
+		{0x200010, 0xa080ff},
+		{0x000000, 0xffffff},
+		{0xffc0a0, 0x300010},
+		{0x002020, 0x00b048},
+		{0xb0b0b0, 0x300010},
+		{0xffc070, 0x007070},
+		{0x151522, 0xbf2fff},
+		{0x302050, 0xbfbfff},
+		{0x603898, 0xff007b},
+		{0x200010, 0xffdfbf},
+		{0xb0b0b0, 0x1b0038},
 		{0x006030, 0xffb040},
 	};
 
 	cur_scheme = ft_better_mod(cur_scheme + dir, NCHOICES);
 	return (choices[cur_scheme]);
 }
-

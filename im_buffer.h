@@ -1,7 +1,7 @@
 #ifndef IM_BUFFER_H
 # define IM_BUFFER_H
 
-#include "mlx.h"
+# include "mlx.h"
 
 /* mlx image + metadata
  * note : width and line_sz are redundant
@@ -16,7 +16,7 @@ typedef struct s_im
 	int		line_sz;
 	int		bytespp;
 	int		big_end;
-} t_im;
+}	t_im;
 
 /* initialize t_im struct by obtaining a valid image pointer
  * and calling mlx_get_data_addr to fill in the metadata 

@@ -14,11 +14,10 @@
 //	int			needs_recompute;
 //}	t_state;
 
-
 static void	ft_redraw(void *win, t_im *im, t_view *v, t_cmap *f)
 {
 	ft_mapc(im, v->topleft, v->pixsz, f);
-	mlx_put_image_to_window(im->mlx, win, im->im, 0, 0);  
+	mlx_put_image_to_window(im->mlx, win, im->im, 0, 0);
 }
 
 int	ft_kbd_hook(int keycode, void *state)
@@ -26,16 +25,16 @@ int	ft_kbd_hook(int keycode, void *state)
 	t_state	*s;
 
 	s = (t_state *) state;
-   	if (keycode == ESC)
+	if (keycode == ESC)
 		ft_quit(s);
 	if (keycode == UP)
-		ft_move_around(s->active, 0, -MV_SPEED); 
+		ft_move_around(s->active, 0, -MV_SPEED);
 	if (keycode == DOWN)
-		ft_move_around(s->active, 0, MV_SPEED); 
+		ft_move_around(s->active, 0, MV_SPEED);
 	if (keycode == LEFT)
-		ft_move_around(s->active, -MV_SPEED, 0); 
+		ft_move_around(s->active, -MV_SPEED, 0);
 	if (keycode == RIGHT)
-		ft_move_around(s->active, MV_SPEED, 0); 
+		ft_move_around(s->active, MV_SPEED, 0);
 	if (keycode == 'j')
 		ft_rot_julia_const(s, -DTHETA);
 	if (keycode == 'k')
@@ -56,9 +55,9 @@ int	ft_ms_hook(int button, int x, int y, void *state)
 	s = (t_state *) state;
 	if (button == MS_LEFT)
 		ft_set_detail(s, s->params->niter + DETAIL_INCR);
-   	else 
+	else
 		ft_set_detail(s, DEF_DETAIL);
-   	if (button == MS_RIGHT)
+	if (button == MS_RIGHT)
 		ft_toggle_julia(s, WIN_SZ, x, y);
 	if (button == SCROLL_UP)
 		ft_zoom_view(s->active, ZOOM, x, y);
@@ -82,7 +81,7 @@ int	ft_ms_hook(int button, int x, int y, void *state)
  * use something like 'usleep(500);' */
 int	ft_redraw_as_needed(void *state)
 {
-	t_state *s;
+	t_state	*s;
 
 	s = (t_state *) state;
 	if (s->needs_recompute)
@@ -90,4 +89,3 @@ int	ft_redraw_as_needed(void *state)
 	s->needs_recompute = 0;
 	return (0);
 }
-

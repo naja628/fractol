@@ -8,7 +8,7 @@ void	ft_set_view(t_view *v, t_cpx topleft, double pixsz)
 
 t_cpx	ft_cpx_xy(t_view *v, int x, int y)
 {
-	t_cpx z;
+	t_cpx	z;
 
 	z = ft_complex(x * v->pixsz, -y * v->pixsz);
 	return (ft_addc(v->topleft, z));

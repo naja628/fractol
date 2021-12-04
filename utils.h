@@ -12,6 +12,6 @@ t_cpx	ft_ccomb(t_cpx z1, t_cpx z2, double k);
 
 /* linear gradient from color0 to color1 
  * expect 0 <= k <= 1 */
-int	ft_gradient(int color0, int color1, double k);
+int		ft_gradient(int color0, int color1, double k);
 
 #endif

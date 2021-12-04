@@ -8,7 +8,6 @@
 # include "views.h"
 # include "hookable.h"
 
-
 // bunch of magic numbers
 # define DEF_DETAIL 40
 # define MV_SPEED 50

@@ -40,13 +40,13 @@ int	ft_iterate_z2_c(t_cpx c, t_cpx z0, void *data)
 // 		  : julia iterate from c 
 int	ft_julia(t_cpx z0, void *data)
 {
-	t_params *params;
-	
+	t_params	*params;
+
 	params = (t_params *) data;
 	return (ft_iterate_z2_c(params->c, z0, data));
 }
 
-int ft_mandelbrot(t_cpx c, void *data)
+int	ft_mandelbrot(t_cpx c, void *data)
 {
 	return (ft_iterate_z2_c(c, ft_complex(0, 0), data));
 }

@@ -10,6 +10,6 @@ typedef unsigned char	t_uchar;
 void	ft_puterr(const char *message);
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
-int		ft_xatoi(const char *s, int *errcode);
+double	ft_xatoi(const char *s, int *errcode);
 
 #endif

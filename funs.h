@@ -5,11 +5,11 @@
 # include "utils.h"
 # include "ft_complex.h"
 
-typedef struct
+typedef struct s_params
 {
-	int niter;
-	t_cpx c;
-	t_colorscheme sch;
+	int				niter;
+	t_cpx			c;
+	t_colorscheme	sch;
 }	t_params;
 
 void	ft_set_params(t_params *params, int niter, t_cpx c);
@@ -20,6 +20,6 @@ int		ft_iterate_z2_c(t_cpx c, t_cpx z0, void *data);
 // z2 + c : mandelbrot -> map c, iterate from 0
 // 		  : julia iterate from c 
 int		ft_julia(t_cpx z0, void *data);
-int 	ft_mandelbrot(t_cpx c, void *data);
+int		ft_mandelbrot(t_cpx c, void *data);
 
 #endif

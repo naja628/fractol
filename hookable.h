@@ -1,6 +1,6 @@
 #ifndef HOOKABLE_H
 # define HOOKABLE_H
-  
+
 # include <stdio.h>
 # include "ft_complex.h"
 # include "funs.h"
