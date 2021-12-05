@@ -1,8 +1,32 @@
 MLX_DIR = '/home/nat/apkg/mlx'
-SRC = ft_complex.c funs.c hookable1.c hookable2.c hooks.c im_buffer.c main.c mapcomplex.c select_color.c utils.c views.c console_args.c 
+SRC= console_args.c ft_complex.c funs.c hookable1.c hookable2.c hooks.c \
+	 im_buffer.c main.c mapcomplex.c select_color.c utils.c views.c
+OBJ=${SRC:.c=.o}
+CFLAGS=-Wall -Wextra -Werror
+CC=gcc
+INC=-I${MLX_DIR}
+LIB=-L${MLX_DIR} -lmlx -lXext -lX11 -lm
+NAME=fractol
 
-all: ${SRC}
-	gcc -Wall -Wextra ${SRC} -o fract-ol -I ${MLX_DIR} -L ${MLX_DIR} -lmlx -lXext -lX11 -lm
+%.o:%.c
+	${CC} -c ${CFLAGS} ${INC} $<
 
-two: ${SRC}
-	gcc -Wall -Wextra ${SRC} -o two -I ${MLX_DIR} -L ${MLX_DIR} -lmlx -lXext -lX11 -lm
+${NAME}: ${OBJ}
+	${CC} ${CFLAGS} -o $@ $^ ${INC} ${LIB}
+	
+all: ${NAME}
+	@#empty
+
+bonus: all
+	@#empty
+
+clean: 
+	rm -rf ${OBJ}
+
+fclean: clean
+	rm -f ${NAME}
+
+re: fclean all
+	@#empty
+
+.PHONY: all re fclean clean bonus all

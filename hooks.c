@@ -67,9 +67,10 @@ int	ft_ms_hook(int button, int x, int y, void *state)
 	return (0);
 }
 
-/* The point of is (eg as opposed to having 
+/* meant to be hooked to mlx_loop_hook.
+ * The point of this is (eg as opposed to having 
  * 'ft_redraw' at the end of the others hooks)
- * is that, when user preses many buttons quickly 
+ * is that, when the user presses many buttons quickly 
  * (eg fast mouse scroll) we do only 1 recompute 
  * for every button press that happened during
  * the previous recompute.

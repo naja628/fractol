@@ -10,11 +10,11 @@ On nixes that use the X window system this should do the trick :
 * Then `make`
 ## Running the program 
 run with one of :
-* `./fract-ol` : same as `./fract-ol -mandelbrot`
-* `./fract-ol -mandelbrot` : to display the madelbrot set
-* `./fract-ol -julia x y` : to dispaly the julia set of the function `z -> z^2 + c` where `c = x/1000 + i.y/1000`
-* `./fract-ol -multibrot d` : with `d > 1000` to display the multibrot set for `z -> z^(d/1000) + c` 
-* `./fract-ol -help` : to print this help box 
+* `./fractol` : same as `./fractol -mandelbrot`
+* `./fractol -mandelbrot` : to display the madelbrot set
+* `./fractol -julia x y` : to dispaly the julia set of the function `z -> z^2 + c` where `c = x/1000 + i.y/1000`
+* `./fractol -multibrot d` : with `d > 1000` to display the multibrot set for `z -> z^(d/1000) + c` 
+* `./fractol -help` : to print this help box 
 ## Using the program 
 * esc : exit
 * mouse scroll : zoom

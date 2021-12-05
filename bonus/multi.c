@@ -8,7 +8,7 @@
 //	t_colorscheme sch;
 //}	t_params;
 
-void	ft_set_params(t_params *params, int niter, t_cpx c, double d)
+void	ft_set_params_d(t_params *params, int niter, t_cpx c, double d)
 {
 	params->niter = niter;
 	params->c = c;
