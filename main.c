@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   main.c                                             :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: najacque <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/12/14 14:31:33 by najacque          #+#    #+#             */
+/*   Updated: 2021/12/15 16:31:39 by najacque         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <stdlib.h>
 #include <stdio.h>
 #include "mlx.h"
@@ -25,8 +37,6 @@ static void	print_helpbox(void)
 		"  * ./fractol -mandelbrot : to display the madelbrot set\n"
 		"  * ./fractol -julia x y : to dispaly the julia set of the "
 		"function z -> z^2 + c where c = x/1000 + i.y/1000\n"
-		"  * ./fractol -multibrot d : with d > 1000 to display the "
-		"multibrot set for z -> z^(d/1000) + c \n"
 		"  * ./fractol -help : to print this help box \n"
 		"## Using the program \n"
 		"  * esc : exit\n"
@@ -37,11 +47,11 @@ static void	print_helpbox(void)
 		"#### Julia only :\n"
 		"  * j/k : rotate the constant anti/clockwise by a *tiny* angle\n"
 		"  * p : print the constant to stdout (eg so you can input it later)\n"
-		"  * right click : go to previous view of the mandelbrot set (or "
-		"multibrot). This loses the Julia fractal view. (1)\n"
-		"#### Multi/Mandelbrot only : \n"
-		"  * right click : display julia fractal for z^2 + c (multi : z^d + "
-		"c) where c is where you clicked (1)\n");
+		"  * right click : go to previous view of the mandelbrot set."
+		" This loses the Julia fractal view. (1)\n"
+		"#### Mandelbrot only : \n"
+		"  * right click : display julia fractal for z^2 + c "
+		" where c is where you clicked (1)\n");
 }
 
 static void	ft_parse_args(t_state *s, int ac, char **av, int *status)

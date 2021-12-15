@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   hooks.c                                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: najacque <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/12/14 14:31:32 by najacque          #+#    #+#             */
+/*   Updated: 2021/12/15 16:17:24 by najacque         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "hooks.h"
 
 /* in hookable.h */
@@ -35,13 +47,13 @@ int	ft_kbd_hook(int keycode, void *state)
 		ft_move_around(s->active, -MV_SPEED, 0);
 	if (keycode == RIGHT)
 		ft_move_around(s->active, MV_SPEED, 0);
-	if (keycode == 'j')
+	if (keycode == J)
 		ft_rot_julia_const(s, -DTHETA);
-	if (keycode == 'k')
+	if (keycode == K)
 		ft_rot_julia_const(s, DTHETA);
 	if (keycode == SPC)
 		ft_next_color(s);
-	if (keycode == 'p')
+	if (keycode == P)
 		return (ft_print_julia_const(s));
 	ft_set_detail(s, DEF_DETAIL);
 	s->needs_recompute = 1;
