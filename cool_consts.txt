@@ -1,17 +1,11 @@
 -748 71 //net
 271 6 // elephant
 270 7 // wave
-
-// wrong -> -158 54 // spiral
 -726 189 // rosace
--0.800 + i0.156 // dragon
+-800 + 156 // dragon
 -206 650 // ropes
 -323 632 // fireworks
--1447 3 // spiral with antennae
--331 628 // galaxy
 -346 620 // flying carpet
 -197 674 //spiral (use j/k)
-117 663 // lightning blot (zoom to center)
--98 650
--95 650
 -28 697 // black magic
+-153 653 // crazy spiral thing

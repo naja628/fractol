@@ -6,7 +6,7 @@
 /*   By: najacque <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/14 14:31:10 by najacque          #+#    #+#             */
-/*   Updated: 2021/12/14 14:31:20 by najacque         ###   ########.fr       */
+/*   Updated: 2021/12/17 15:22:12 by najacque         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -112,5 +112,5 @@ double	ft_xatoi(const char *s, int *errcode)
 	}
 	if (*s != '\0')
 		*errcode = -1;
-	return (sign * acc / 1000.0);
+	return ((double) sign * acc / 1000);
 }
