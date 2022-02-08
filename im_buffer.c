@@ -43,7 +43,10 @@ void	ft_init_im(void *mlx, t_im *t, int width, int height)
 }
 
 /* write a pixel with color 'color' at the x, y position 
- * in the image im */
+ * in the image im 
+ *
+ * is there alignment problems with the if? 
+ */
 void	ft_pix_to_im(t_im *im, int x, int y, int color)
 {
 	char	*write_addr;
@@ -62,7 +65,8 @@ void	ft_pix_to_im(t_im *im, int x, int y, int color)
 	while (cur_byte < im->bytespp)
 	{
 		if (im->big_end)
-			write_addr[cur_byte] = color >> 8 * (im->bytespp - cur_byte - 1);
+			write_addr[cur_byte] = color >> 8
+				* (cur_byte + sizeof(unsigned int) - im->bytespp);
 		else
 			write_addr[cur_byte] = color >> 8 * cur_byte;
 		++cur_byte;

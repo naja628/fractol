@@ -1,13 +1,17 @@
 # at 19
-MLX_DIR = '/usr/local'
+# MLX_DIR = '/usr/local'
+#
 # on my pc
-# MLX_DIR = /home/nat/apkg/mlx
+MLX_DIR = /home/nat/apkg/mlx
+
 # mac
-OS=MAC
-LIB=-L${MLX_DIR} -lmlx -lm -framework AppKit -framework OpenGL
+# OS=MAC
+# LIB=-L${MLX_DIR} -lmlx -lm -framework AppKit -framework OpenGL
+#
 # linux
-# OS=LINUX
-# LIB=-L${MLX_DIR} -lmlx -lm -lXect -lX11
+OS=LINUX
+LIB=-L${MLX_DIR} -lmlx -lm -lXext -lX11
+
 SRC= console_args.c ft_complex.c funs.c hookable1.c hookable2.c hooks.c \
 	 im_buffer.c main.c mapcomplex.c select_color.c utils.c views.c
 OBJ=${SRC:.c=.o}
